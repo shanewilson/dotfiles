@@ -1,0 +1,27 @@
+[user]
+	name = 
+	email = 
+
+[github]
+	user = 
+	token = 
+
+[alias]
+    co = checkout
+
+[format]
+    pretty = %C(bold magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
+[core]
+    excludesfile = <%= ENV['HOME'] %>/.gitignore
+    editor = mate_wait
+    autocrlf = input
+
+[apply]
+    whitespace = nowarn
+
