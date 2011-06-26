@@ -101,7 +101,7 @@ MODE_INDICATOR="%{$fg_bold[red]%}❮%{$reset_color%}%{$fg[red]%}❮❮%{$reset_c
 local return_status="%{$fg[red]%}%(?..⏎)%{$reset_color%}"
 
 PROMPT='
-%{$fg[green]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg_bold[cyan]%}$(collapse_pwd)%{$reset_color%}${vcs_info_msg_0_}$(svn_dirty)$(hg_prompt_info)
+%{$fg[green]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg_bold[white]%}$(collapse_pwd)%{$reset_color%}${vcs_info_msg_0_}$(svn_dirty)$(hg_prompt_info)
 $(virtualenv_info)%{$fg[green]%}$(prompt_char)%{$reset_color%} '
 
 ### Detailed VCS actions
