@@ -24,6 +24,7 @@
 " Snipmate	    Configurable snippets to avoid re-typing common comands
 " PyFlakes	    Underlines and displays errors with Python on-the-fly
 " Fugitive	    Interface with git from vim
+" Gitv          View a repository's history including branching and merging
 " Git		    Syntax highlighting for git config files
 " Minibufexpl	Visually display what buffers are currently opened
 " Surround	    Allows you to surround text with open/close tags
@@ -149,6 +150,7 @@ autocmd FileType * setlocal colorcolumn=0
 set completeopt=menuone,longest,preview
 set pumheight=6             " Keep a small completion window
 
+set t_Co=256
 " show a line at column 79
  if exists("&colorcolumn")
     set colorcolumn=79
@@ -216,7 +218,7 @@ set incsearch               " Incrementally search while typing a /regex
 if has("gui_running")
     colorscheme solarized
 else
-    colorscheme torte
+    colorscheme solarized 
 endif
 
 " Paste from clipboard

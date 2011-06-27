@@ -7,19 +7,18 @@
 	token = 
 
 [alias]
-    co = checkout
-
-[format]
-    pretty = %C(bold magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+    unstage = reset HEAD
+    hist = log --graph --date=short --pretty=format:'%C(bold magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [color]
+    interactive = auto
     diff = auto
     status = auto
     branch = auto
 
 [core]
     excludesfile = <%= ENV['HOME'] %>/.gitignore
-    editor = mate_wait
+    editor = vim
     autocrlf = input
 
 [apply]
