@@ -1,39 +1,39 @@
-" https://github.com/shanezilla/dotfiles/
+" https://github.com/shanewilson/dotfiles/
 " based on: https://github.com/sontek/dotfiles/
 " 
 " ==========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
-" Pep8		    pip install pep8
-" Pyflakes	    pip install pyflakes
-" Ack		    apt-get install ack
-" Rake & Ruby 	apt-get install rake ruby ruby-dev 
-" nose 		    pip install nose
-" django-nose	pip install django-nose
+" Pep8          pip install pep8
+" Pyflakes      pip install pyflakes
+" Ack           apt-get install ack
+" Rake & Ruby   apt-get install rake ruby ruby-dev 
+" nose          pip install nose
+" django-nose   pip install django-nose
 
 " ==========================================================
 " Plugins included
 " ==========================================================
-" Pathogen	    Better Management of VIM plugins
-" GunDo		    Visual Undo in vim with diff's to check the differences
-" TaskList	    
-" Ack		    
-" SuperTab	    
-" NERDTree	    
-" Commant-T	    Allows easy search and opening of files within a given path
-" Snipmate	    Configurable snippets to avoid re-typing common comands
-" PyFlakes	    Underlines and displays errors with Python on-the-fly
-" Fugitive	    Interface with git from vim
+" Pathogen      Better Management of VIM plugins
+" GunDo         Visual Undo in vim with diff's to check the differences
+" TaskList
+" Ack
+" SuperTab
+" NERDTree
+" Commant-T     Allows easy search and opening of files within a given path
+" Snipmate      Configurable snippets to avoid re-typing common comands
+" PyFlakes      Underlines and displays errors with Python on-the-fly
+" Fugitive      Interface with git from vim
 " Gitv          View a repository's history including branching and merging
-" Git		    Syntax highlighting for git config files
-" Minibufexpl	Visually display what buffers are currently opened
-" Surround	    Allows you to surround text with open/close tags
-" Pytest	    Runs your Python tests in Vim.
-" Pydoc		    Opens up pydoc within vim
-" Py.test	    Run py.test test's from within vim
-" Pep8          
-" MakeGreen	    Generic test runner that works with nose
-" Rope			
+" Git           Syntax highlighting for git config files
+" Minibufexpl   Visually display what buffers are currently opened
+" Surround      Allows you to surround text with open/close tags
+" Pytest        Runs your Python tests in Vim.
+" Pydoc         Opens up pydoc within vim
+" Py.test       Run py.test test's from within vim
+" Pep8
+" MakeGreen     Generic test runner that works with nose
+" Rope
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -206,7 +206,6 @@ set shortmess+=a            " Use [+]/[RO]/[w] for modified/readonly/written.
 set ruler                   " Show some info, even without statuslines.
 set laststatus=2            " Always show statusline, even if only 1 window.
 set statusline=\%{bufnr('%')}:\ %f\ %m%r%h\ %w\ %{fugitive#statusline()}\ %=[%{&fileformat}:%{&fileencoding}:%{&filetype}]\ %l,%v\ %P " statusline
-" set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
 
 " displays tabs with :set list & displays when a line runs off-screen
 " set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
@@ -264,7 +263,7 @@ autocmd BufNewFile,BufRead *.mako,*.mak setlocal ft=html
 autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " Python
-au BufRead *.py compiler nose
+" au BufRead *.py compiler nose
 au FileType python set omnifunc=pythoncomplete#Complete
 inoremap <Nul> <C-x><C-o>
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
@@ -274,10 +273,8 @@ let g:SuperTabDefaultCompletionType = "context"
 " Don't let pyflakes use the quickfix window
 let g:pyflakes_use_quickfix = 1
 
-" if !exists("autocommands_loaded")
-"  let autocommands_loaded = 1
-"  autocmd BufRead,BufNewFile,FileReadPost *.py source ~/.vim/python
-"endif
+" Execute file being edited with <Shift> + e:
+map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 
 " This beauty remembers where you were the last time you edited the file, and returns to the same position.
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
