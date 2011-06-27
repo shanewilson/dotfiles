@@ -55,3 +55,6 @@
 [submodule "_vim/bundle/gitv"]
 	path = _vim/bundle/gitv
 	url = git://github.com/gregsexton/gitv.git
+[submodule "_vim/bundle/vim-cute-python"]
+	path = _vim/bundle/vim-cute-python
+	url = git://github.com/JNRowe/vim-cute-python.git

@@ -264,16 +264,23 @@ autocmd BufNewFile,BufRead *.mako,*.mak setlocal ft=html
 autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " Python
-"au BufRead *.py compiler nose
+au BufRead *.py compiler nose
 au FileType python set omnifunc=pythoncomplete#Complete
+inoremap <Nul> <C-x><C-o>
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 " SuperTab
 let g:SuperTabDefaultCompletionType = "context"
 " Don't let pyflakes use the quickfix window
-let g:pyflakes_use_quickfix = 0
+let g:pyflakes_use_quickfix = 1
 
+" if !exists("autocommands_loaded")
+"  let autocommands_loaded = 1
+"  autocmd BufRead,BufNewFile,FileReadPost *.py source ~/.vim/python
+"endif
 
+" This beauty remembers where you were the last time you edited the file, and returns to the same position.
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
