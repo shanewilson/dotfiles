@@ -150,7 +150,6 @@ autocmd FileType * setlocal colorcolumn=0
 set completeopt=menuone,longest,preview
 set pumheight=6             " Keep a small completion window
 
-set t_Co=256
 " show a line at column 79
  if exists("&colorcolumn")
     set colorcolumn=79
@@ -221,10 +220,11 @@ set incsearch               " Incrementally search while typing a /regex
 set nohlsearch              " Disable highlighting during search
 
 """" Display
+set t_Co=256
 if has("gui_running")
     colorscheme solarized
 else
-    colorscheme solarized 
+    colorscheme solarized
 endif
 
 " Paste from clipboard
