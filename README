@@ -3,7 +3,9 @@ oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
 symlink zsh: _zshrc, xeno.zsh-theme
 symlink vim: _vimrc, _vim/
 git submodule init && git submodule update && git submodule foreach git submodule init && git submodule foreach git submodule update
-dl () from bitbucket
+dl from bitbucket:
+    hg clone https://bitbucket.org/ns9tks/vim-autocomplpop
+    hg clone https://bitbucket.org/ns9tks/vim-l9
 apt-get install vim-nox ruby rake ruby-dev
 run rake make in command-t
 solarized genome terminal: http://xorcode.com/guides/solarized-vim-eclipse-ubuntu/
