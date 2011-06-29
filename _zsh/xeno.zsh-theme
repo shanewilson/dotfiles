@@ -48,7 +48,7 @@ svn_prompt_status() {
 ############################################################
 # VCS
 ############################################################
-zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:*' enable git svn hg
 zstyle ':vcs_info:*' get-revision true
 zstyle ':vcs_info:*' check-for-changes true
 
