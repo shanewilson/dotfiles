@@ -223,6 +223,7 @@ set nohlsearch              " Disable highlighting during search
 set t_Co=256
 if has("gui_running")
     colorscheme solarized
+    set background=light
 else
     colorscheme solarized
 endif
