@@ -96,7 +96,7 @@ nmap <silent><Leader>te <Esc>:Pytest error<CR>
 " SuperTab
 let g:SuperTabDefaultCompletionType = "context"
 " Select the item in the list with enter
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Run django tests
 map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
