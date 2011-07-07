@@ -5,7 +5,7 @@ autoload -Uz vcs_info
 setopt prompt_subst # Enables additional prompt extentions
 autoload -U colors && colors # Enables colours
 
-# {{{ Custom Functions
+# Custom # {{{ Custom Functions
 function collapse_pwd {
     echo $(pwd | sed -e "s,^$HOME,~,")
 }
@@ -133,3 +133,4 @@ zle-line-init () {
   fi
 }; zle -N zle-line-init
 
+# vim:foldmethod=marker:foldlevel=0

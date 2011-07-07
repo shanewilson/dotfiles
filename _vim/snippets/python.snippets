@@ -1,2 +1,10 @@
 snippet pdb
 	import pdb; pdb.set_trace()
+snippet ipdb
+	import ipdb; ipdb.set_trace()
+snippet mem
+	import ipdb; from guppy import hpy; hpy = hpy(); import objgraph; ipdb.set_trace()
+snippet log
+	log = __import  ('logging').getLogger( name )
+snippet here
+	here = os.path.abspath(os.path.dirname(__file__))
