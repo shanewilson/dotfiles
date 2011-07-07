@@ -12,7 +12,7 @@ function collapse_pwd {
     echo $(pwd | sed -e "s,^$HOME,~,")
 }
 function virtualenv_info {
-    [ $VIRTUAL_ENV ] && echo '[ '`basename $VIRTUAL_ENV`' ] '
+    echo '[ '`basename $VIRTUAL_ENV`' ] '
 }
 function hg_prompt_info {
     hg prompt --angle-brackets "\
