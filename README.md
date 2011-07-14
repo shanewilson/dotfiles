@@ -19,7 +19,7 @@ To get the most of vim you will need to install the following:
 
 [Ruby][], [Rake][] and [Ack][]
 
-    apt-get install rake ruby ruby-dev ack
+    apt-get install ruby ruby-dev rake ack
 
 If your vim does not have ruby support
 
@@ -38,15 +38,40 @@ If your vim does not have ruby support
 [Ack]: http://betterthangrep.com/
 
 ### Script
+At some point.
 
 ### Manual
-symlink zsh: _zshrc, xeno.zsh-theme
-symlink vim: _vimrc, _vim/
-git submodule init && git submodule update && git submodule foreach git submodule init && git submodule foreach git submodule update
-dl from bitbucket:
-    hg clone https://bitbucket.org/ns9tks/vim-autocomplpop
-    hg clone https://bitbucket.org/ns9tks/vim-l9
-apt-get install vim-nox ruby rake ruby-dev
-run rake make in command-t
-solarized genome terminal: http://xorcode.com/guides/solarized-vim-eclipse-ubuntu/
+
+    git clone --recurse-submodules git://github.com/shanewilson/dotfiles.git
+
+#### zsh
+This assumes you have *oh-my-zsh* installed and working.
+
+Backup your current *~/.zsh* and *~/.zshrc*
+
+Symlink *~/.zsh* and *~/.zshrc* to *\_zsh* and *\_zshrc* respectively
+
+    ln -s path/to/dotfiles/_zsh ~/.zsh
+    ln -s path/to/dotfiles/_zshrc ~/.zshrc
+
+Symlink to the *oh-my-zsh* theme
+
+    ln -s path/to/dotfiles/_zsh/xeno.zsh-theme ~/.oh-my-zsh/themes/xeno.zsh-theme
+
+#### vim
+Backup your current *~/.vim* and *~/.vimrc*
+
+Symlink *~/.vim* and *~/.vimrc* to *\_vim* and *\_vimrc* respectively
+
+    ln -s path/to/dotfiles/_vim ~/.vim
+    ln -s path/to/dotfiles/_vimrc ~/.vimrc
+
+Setup Command-T
+
+    cd path/to/dotfiles/_vim/bundle/command-t
+    rake make
+
+#### Solarized Terminal
+Everything was put together while using the [solarized][] colour scheme, so you should probably make sure to use it. It is already included with vim, but the get the most out of the zsh theme you will have to configure your terminal as well.  
+[solarized genome terminal]: http://xorcode.com/guides/solarized-vim-eclipse-ubuntu/
 
