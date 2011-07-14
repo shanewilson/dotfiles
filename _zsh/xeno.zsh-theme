@@ -1,3 +1,4 @@
+# vim:foldmethod=marker:foldlevel=0
 ### Shows state of the Versioning Control System (e.g. Git, Subversion, Mercurial
 autoload -Uz vcs_info
 
@@ -5,13 +6,17 @@ autoload -Uz vcs_info
 setopt prompt_subst # Enables additional prompt extentions
 autoload -U colors && colors # Enables colours
 
-# {{{ Custom Functions
+# Custom Functions # {{{
+# ============================================================
+# Convert $HOME to ~
 function collapse_pwd {
     echo $(pwd | sed -e "s,^$HOME,~,")
 }
+# Shows VIRTUAL_ENV info
 function virtualenv_info {
      [ $VIRTUAL_ENV ] && echo '[ '`basename $VIRTUAL_ENV`' ] '
 }
+# HG Versioning Info
 function hg_prompt_info {
     hg prompt --angle-brackets "\
 < on %{$fg[magenta]%}<branch>%{$reset_color%}>\
@@ -19,7 +24,6 @@ function hg_prompt_info {
 %{$fg[green]%}<status|modified|unknown><update>%{$reset_color%}<
 patches: <patches|join( → )|pre_applied(%{$fg[yellow]%})|post_applied(%{$reset_color%})|pre_unapplied(%{$fg_bold[black]%})|post_unapplied(%{$reset_color%})>>" 2>/dev/null
 }
-# }}}
 
 # Get the status of the working svn tree
 # Copied from the git function, reworked for svn
@@ -43,10 +47,9 @@ function svn_prompt_status() {
   fi
   echo $STATUS
 }
-
-############################################################
-# VCS
-############################################################
+# }}}
+# VCS # {{{
+# ============================================================
 zstyle ':vcs_info:*' enable git svn hg
 zstyle ':vcs_info:*' get-revision true
 zstyle ':vcs_info:*' check-for-changes true
@@ -58,6 +61,7 @@ ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} ✖"
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} ➜"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} ═"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
+
 ### Svn Icons
 ZSH_THEME_SVN_PROMPT_DIRTY=" %{$fg[yellow]%}✭" 
 ZSH_THEME_SVN_PROMPT_CLEAN=""
@@ -76,11 +80,12 @@ zstyle ':vcs_info:*' actionformats "${FMT_BRANCH}${FMT_ACTION}"
 zstyle ':vcs_info:*' formats "${FMT_BRANCH}"
 zstyle ':vcs_info:*' nvcsformats ""
 zstyle ':vcs_info:*' branchformat '%b@%r'
+
 precmd () {
     if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
-	zstyle ':vcs_info:git*:*' formats ' on %F{blue}%r:%F{cyan}%b@%.5i%c%u%f%f'
+        zstyle ':vcs_info:git*:*' formats ' on %F{blue}%r:%F{cyan}%b@%.5i%c%u%f%f'
     } else {
-	zstyle ':vcs_info:git*:*' formats ' on %F{blue}%r:%F{cyan}%b@%.5i %F{red}✗%f%f'
+        zstyle ':vcs_info:git*:*' formats ' on %F{blue}%r:%F{cyan}%b@%.5i %F{red}✗%f%f'
     }
     vcs_info
 }
@@ -92,10 +97,9 @@ hg root >/dev/null 2>/dev/null && echo '☿ → ' && return
 svn info >/dev/null 2>/dev/null && echo '⚡ → ' && return
 echo '○ → '
 }
-
-############################################################
-# Prompt
-############################################################
+# }}}
+# Prompt Formatting # {{{
+# ============================================================
 MODE_INDICATOR="%{$fg_bold[red]%}❮%{$reset_color%}%{$fg[red]%}❮❮%{$reset_color%}"
 local return_status="%{$fg[red]%}%(?..⏎)%{$reset_color%}"
 
@@ -132,4 +136,5 @@ zle-line-init () {
     echo -ne "\033]12;grey\007"
   fi
 }; zle -N zle-line-init
+# }}}
 
