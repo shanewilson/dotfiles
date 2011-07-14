@@ -44,10 +44,10 @@ At some point.
 
     git clone --recurse-submodules git://github.com/shanewilson/dotfiles.git
 
+**Backup any config files before you change them.**
+
 #### zsh
 This assumes you have *oh-my-zsh* installed and working.
-
-Backup your current *~/.zsh* and *~/.zshrc*
 
 Symlink *~/.zsh* and *~/.zshrc* to *\_zsh* and *\_zshrc* respectively
 
@@ -59,8 +59,6 @@ Symlink to the *oh-my-zsh* theme
     ln -s path/to/dotfiles/_zsh/xeno.zsh-theme ~/.oh-my-zsh/themes/xeno.zsh-theme
 
 #### vim
-Backup your current *~/.vim* and *~/.vimrc*
-
 Symlink *~/.vim* and *~/.vimrc* to *\_vim* and *\_vimrc* respectively
 
     ln -s path/to/dotfiles/_vim ~/.vim
@@ -72,12 +70,9 @@ Setup Command-T
     rake make
 
 #### git
-Backup your current *~/.vim* and *~/.vimrc*
+Symlink *~/.gitconfig* to *\_gitconfig*
 
-Symlink *~/.vim* and *~/.vimrc* to *\_vim* and *\_vimrc* respectively
-
-    ln -s path/to/dotfiles/_vim ~/.vim
-    ln -s path/to/dotfiles/_vimrc ~/.vimrc
+    ln -s path/to/dotfiles/_gitconfig ~/.gitconfig
 
 #### Solarized Terminal
 Everything was put together while using the [solarized][] colour scheme, so you should probably make sure to use it too. It is already included with vim, but to get the most out of the zsh theme you will need a [solarized genome terminal][] as well.
@@ -85,7 +80,7 @@ Everything was put together while using the [solarized][] colour scheme, so you 
 [solarized]: http://ethanschoonover.com/solarized
 [solarized genome terminal]: http://xorcode.com/guides/solarized-vim-eclipse-ubuntu/
 
-### Credits
+## Credits
 https://github.com/ryanb/dotfiles  
 http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/  
 http://matija.suklje.name/?q=node/207  
