@@ -71,7 +71,21 @@ Setup Command-T
     cd path/to/dotfiles/_vim/bundle/command-t
     rake make
 
+#### git
+Backup your current *~/.vim* and *~/.vimrc*
+
+Symlink *~/.vim* and *~/.vimrc* to *\_vim* and *\_vimrc* respectively
+
+    ln -s path/to/dotfiles/_vim ~/.vim
+    ln -s path/to/dotfiles/_vimrc ~/.vimrc
+
 #### Solarized Terminal
-Everything was put together while using the [solarized][] colour scheme, so you should probably make sure to use it. It is already included with vim, but the get the most out of the zsh theme you will have to configure your terminal as well.  
+Everything was put together while using the [solarized][] colour scheme, so you should probably make sure to use it too. It is already included with vim, but to get the most out of the zsh theme you will need a [solarized genome terminal][] as well.
+
+[solarized]: http://ethanschoonover.com/solarized
 [solarized genome terminal]: http://xorcode.com/guides/solarized-vim-eclipse-ubuntu/
 
+### Credits
+https://github.com/ryanb/dotfiles  
+http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/  
+http://matija.suklje.name/?q=node/207  
