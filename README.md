@@ -1,21 +1,28 @@
 # Dot Files
-Collection of config files to setup a system
-- - -
+Collection of config files to setup my system
 # Installation
 ## Dependences
-#### zshrc
+#### zsh
 If you plan on using zsh settings you will need [oh-my-zsh][]
-
 #### vim
-To get the most of vim you will need to install the following:
-[Python][] and [PIP][]
+To get the most of vim you will need to install the following:  
+
+* [Python][] and [PIP][]  
+
     apt-get python pip
-[Pep8][], [Pyflakes][], [Nose][] and [Django Nose][]
+
+* [Pep8][], [Pyflakes][], [Nose][] and [Django Nose][]  
+
     pip install pep8 pyflakes nose django-nose
-[Ruby][], [Rake][] and [Ack][]
+
+* [Ruby][], [Rake][] and [Ack][]  
+
     apt-get install rake ruby ruby-dev ack
-If your vim does not have ruby support
+
+* If your vim does not have ruby support  
+
     apt-get install vim-nox
+
 
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [Python]: http://www.python.org
