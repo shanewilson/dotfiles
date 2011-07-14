@@ -58,3 +58,9 @@
 [submodule "_vim/bundle/vim-cute-python"]
 	path = _vim/bundle/vim-cute-python
 	url = git://github.com/JNRowe/vim-cute-python.git
+[submodule "_vim/bundle/vim-autocomlpop"]
+	path = _vim/bundle/vim-autocomlpop
+	url = https://github.com/oppara/vim-autocomplpop
+[submodule "_vim/bundle/vim-l9"]
+	path = _vim/bundle/vim-l9
+	url = git://github.com/oppara/vim-l9.git
