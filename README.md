@@ -11,7 +11,7 @@ To get the most of vim you will need to install the following:
 
 [Python][] and [PIP][]
 
-    apt-get python
+    apt-get python python-setuptools
     easy_install pip 
 
 [Pep8][], [Pyflakes][], [Nose][] and [Django Nose][]
