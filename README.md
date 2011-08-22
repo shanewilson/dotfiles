@@ -16,7 +16,7 @@ To get the most of vim you will need to install the following:
 
 [Pep8][], [Pyflakes][], [Nose][] and [Django Nose][]
 
-    pip install pep8 pyflakes nose django-nose
+    sudo pip install pep8 pyflakes nose django-nose
 
 [Ruby][], [Rake][] and [Ack][]
 
@@ -26,6 +26,9 @@ If your vim does not have ruby support
 
     apt-get install vim-nox
 
+Ctags support for TagList
+
+    apt-get install exuberant-ctags
 
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [Python]: http://www.python.org
@@ -38,7 +41,7 @@ If your vim does not have ruby support
 [Rake]: http://rake.rubyforge.org/
 [Ack]: http://betterthangrep.com/
 
-### Script
+### Install Script
 At some point.
 
 ### Manual
