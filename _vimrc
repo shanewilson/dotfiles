@@ -19,9 +19,11 @@ set nocompatible              " Don't be compatible with vi
 " Pathogen      Better Management of VIM plugins
 " GunDo         Visual Undo in vim with diff's to check the differences
 " TaskList
+" TagList       List of variable definitions
 " Ack
 " SuperTab
 " NERDTree
+" NERDCommenter
 " Commant-T     Allows easy search and opening of files within a given path
 " Snipmate      Configurable snippets to avoid re-typing common comands
 " PyFlakes      Underlines and displays errors with Python on-the-fly
@@ -49,6 +51,10 @@ call pathogen#helptags()
 " ==========================================================
 " Change the leader to be a comma vs slash
 let mapleader=","
+let maplocalleader="\\"
+
+nnoremap ; :
+
 
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w
@@ -76,14 +82,31 @@ map <c-h> <c-w>h
 " and lets make these all work in insert mode too ( <C-O> makes next cmd
 "  happen as if in command mode )
 imap <C-W> <C-O><C-W>
+
+" Paste from clipboard
+map <leader>p "+gP
+
+" Quit window on <leader>q
+nnoremap <leader>q :q<CR>
+"
+" hide matches on <leader>space
+nnoremap <leader><space> :nohlsearch<cr>
+
+" Remove trailing whitespace on <leader>S
+nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
+
 " }}}
 " Plugins "{{{
 " ==========================================================
-" Toggle the tasklist
-map <leader>td <Plug>TaskList
+" Toggle the TaskList
+map <leader>l <Plug>TaskList
 
 " Run pep8
 let g:pep8_map='<leader>8'
+
+" Toggle TagList
+let g:tagbar_usearrows = 1
+nnoremap <leader>t :TagbarToggle<CR>
 
 " run py.test's
 nmap <silent><Leader>tf <Esc>:Pytest file<CR>
@@ -96,7 +119,7 @@ nmap <silent><Leader>te <Esc>:Pytest error<CR>
 " SuperTab
 let g:SuperTabDefaultCompletionType = "context"
 " Select the item in the list with enter
-"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Run django tests
 map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
@@ -155,6 +178,10 @@ set pumheight=6             " Keep a small completion window
  if exists("&colorcolumn")
     set colorcolumn=79
 endif
+
+" Better modes. Remeber where we are, support yankring
+set viminfo=!,'100,\"100,:20,<50,s10,h,n~/.viminfo
+
 " }}}
 " Moving Around/Editing "{{{
 " ==========================================================
@@ -187,6 +214,9 @@ inoremap # #
 " close preview window automatically when we move around
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" This beauty remembers where you were the last time you edited the file, and returns to the same position.
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 " }}}
 " Reading/Writing "{{{
 " ==========================================================
@@ -233,19 +263,6 @@ if has("gui_running")
 else
     colorscheme solarized
 endif
-
-" Paste from clipboard
-map <leader>p "+gP
-
-" Quit window on <leader>q
-nnoremap <leader>q :q<CR>
-"
-" hide matches on <leader>space
-nnoremap <leader><space> :nohlsearch<cr>
-
-" Remove trailing whitespace on <leader>S
-nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
-
 " }}}
 " FileType specific changes "{{{
 " ============================================================
@@ -276,8 +293,6 @@ let g:pyflakes_use_quickfix = 1
 " Execute file being edited with <Shift> + e:
 map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 
-" This beauty remembers where you were the last time you edited the file, and returns to the same position.
-au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 " }}}
 " Virtual Env "{{{
 " ==========================================================

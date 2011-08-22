@@ -6,7 +6,7 @@ autoload -Uz vcs_info
 setopt prompt_subst # Enables additional prompt extentions
 autoload -U colors && colors # Enables colours
 
-# Custom Functions # {{{
+# Custom Functions # {{{za
 # ============================================================
 # Convert $HOME to ~
 function collapse_pwd {
@@ -63,7 +63,7 @@ ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} ═"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
 
 ### Svn Icons
-ZSH_THEME_SVN_PROMPT_DIRTY=" %{$fg[yellow]%}✭" 
+ZSH_THEME_SVN_PROMPT_DIRTY=" %{$fg[yellow]%}✭"
 ZSH_THEME_SVN_PROMPT_CLEAN=""
 ZSH_THEME_SVN_PROMPT_ADDED="%{$fg[green]%} ✚"
 ZSH_THEME_SVN_PROMPT_MODIFIED="%{$fg[blue]%} ✹"
@@ -104,7 +104,7 @@ MODE_INDICATOR="%{$fg_bold[red]%}❮%{$reset_color%}%{$fg[red]%}❮❮%{$reset_c
 local return_status="%{$fg[red]%}%(?..⏎)%{$reset_color%}"
 
 PROMPT='
-%{$fg[green]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg_bold[white]%}$(collapse_pwd)%{$reset_color%}${vcs_info_msg_0_}$(svn_dirty)%{$reset_color%}
+%{$fg[green]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg_bold[white]%}$(collapse_pwd)%{$reset_color%}${vcs_info_msg_0_}%{$reset_color%}
 %{$fg[magenta]%}$(virtualenv_info)%{$fg[green]%}$(prompt_char)%{$reset_color%} '
 
 ### Detailed VCS actions

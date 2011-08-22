@@ -21,7 +21,7 @@
 	url = git://github.com/wincent/Command-T.git
 [submodule "_vim/bundle/pyflakes"]
 	path = _vim/bundle/pyflakes
-	url = git://github.com/mitechie/pyflakes-pathogen.git
+	url = git://github.com/kevinw/pyflakes-pathogen.git
 [submodule "_vim/bundle/ack"]
 	path = _vim/bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
@@ -64,3 +64,12 @@
 [submodule "_vim/bundle/vim-l9"]
 	path = _vim/bundle/vim-l9
 	url = git://github.com/oppara/vim-l9.git
+[submodule "_vim/bundle/nerdcommenter"]
+	path = _vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "_vim/bundle/tagbar"]
+	path = _vim/bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
+[submodule "_vim/bundle/python-syntax"]
+	path = _vim/bundle/python-syntax
+	url = git://github.com/olivierverdier/python-syntax.vim.git
