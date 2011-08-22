@@ -56,7 +56,6 @@ let maplocalleader="\\"
 
 nnoremap ; :
 
-
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w
 
@@ -122,6 +121,15 @@ let g:SuperTabDefaultCompletionType = "context"
 " Select the item in the list with enter
 "inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
+" Don't allow snipmate to take over tab
+autocmd VimEnter * ino <c-j> <c-r>=TriggerSnippet()<cr>
+
+" Use tab to scroll through autocomplete menus
+autocmd VimEnter * imap <expr> <Tab> pumvisible() ? "<C-N>" : "<Tab>"
+autocmd VimEnter * imap <expr> <S-Tab> pumvisible() ? "<C-P>" : "<S-Tab>"
+snor <c-j> <esc>i<right><c-r>=TriggerSnippet()<cr>
+let g:acp_completeoptPreview=1
+
 " Run django tests
 map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
 " Open NerdTree
@@ -168,7 +176,7 @@ nnoremap <leader>. :lcd %:p:h<CR>
 
 " Disable the colorcolumn when switching modes.  Make sure this is the
 " first autocmd for the filetype here
-autocmd FileType * setlocal colorcolumn=0
+"autocmd FileType * setlocal colorcolumn=0
 
 """ Insert completion
 " don't select first item, follow typing in autocomplete
@@ -260,23 +268,16 @@ set nohlsearch              " Disable highlighting during search
 set t_Co=256
 if has("gui_running")
     colorscheme solarized
-    set background=light
+    set background=dark
 else
     colorscheme solarized
+    set background=dark
 endif
 " }}}
 " FileType specific changes "{{{
 " ============================================================
 """ Javascript
 au BufRead *.js set makeprg=jslint\ %
-
-" Don't allow snipmate to take over tab
-autocmd VimEnter * ino <c-j> <c-r>=TriggerSnippet()<cr>
-" Use tab to scroll through autocomplete menus
-autocmd VimEnter * imap <expr> <Tab> pumvisible() ? "<C-N>" : "<Tab>"
-autocmd VimEnter * imap <expr> <S-Tab> pumvisible() ? "<C-P>" : "<S-Tab>"
-snor <c-j> <esc>i<right><c-r>=TriggerSnippet()<cr>
-let g:acp_completeoptPreview=1
 
 """ Mako/HTML
 autocmd BufNewFile,BufRead *.mako,*.mak setlocal ft=html
