@@ -56,6 +56,7 @@ let maplocalleader="\\"
 
 nnoremap ; :
 imap jk <ESC>
+cmap x x<CR>
 
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w
