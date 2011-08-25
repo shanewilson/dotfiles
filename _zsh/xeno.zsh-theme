@@ -6,7 +6,7 @@ autoload -Uz vcs_info
 setopt prompt_subst # Enables additional prompt extentions
 autoload -U colors && colors # Enables colours
 
-# Custom Functions # {{{za
+# Custom Functions # {{{
 # ============================================================
 # Convert $HOME to ~
 function collapse_pwd {
@@ -14,7 +14,7 @@ function collapse_pwd {
 }
 # Shows VIRTUAL_ENV info
 function virtualenv_info {
-     [ $VIRTUAL_ENV ] && echo '[ '`basename $VIRTUAL_ENV`' ] '
+     echo '[ '`basename $VIRTUAL_ENV`' ] '
 }
 # HG Versioning Info
 function hg_prompt_info {
