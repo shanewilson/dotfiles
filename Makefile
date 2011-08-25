@@ -16,5 +16,5 @@ install-vim:
 	cd vim/bundle/command-t; rake make
 
 install-xterm:
-	if test -f ~/.Xdefaults; then mv ~/.Xdefaults ~/.Xdefaults.bak; fi
-	ln -s `pwd`/.Xdefaults ~/.Xdefaults
+	if test -f ~/.Xresources; then mv ~/.Xresources ~/.Xresources.bak; fi
+	ln -s `pwd`/.Xresources ~/.Xresources
