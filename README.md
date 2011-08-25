@@ -2,6 +2,9 @@
 Collection of config files to setup my system
 
 ## Installation
+
+    git clone --recurse-submodules git://github.com/shanewilson/dotfiles.git
+
 ### Dependences
 #### zsh
 If you plan on using zsh settings you will need [oh-my-zsh][]
@@ -12,7 +15,7 @@ To get the most of vim you will need to install the following:
 [Python][] and [PIP][]
 
     apt-get python python-setuptools
-    easy_install pip 
+    easy_install pip
 
 [Pep8][], [Pyflakes][], [Nose][] and [Django Nose][]
 
@@ -42,35 +45,31 @@ Ctags support for TagList
 [Ack]: http://betterthangrep.com/
 
 ### Install Script
-At some point.
+
+    make install
 
 ### Manual
-
-    git clone --recurse-submodules git://github.com/shanewilson/dotfiles.git
 
 **Backup any config files before you change them.**
 
 #### zsh
 This assumes you have *oh-my-zsh* installed and working.
 
-Symlink *~/.zsh* and *~/.zshrc* to *\_zsh* and *\_zshrc* respectively
+Symlink *~/.zsh* and *~/.zshrc* to */zsh* and */zsh/zshrc* respectively
 
-    ln -s path/to/dotfiles/_zsh ~/.zsh
-    ln -s path/to/dotfiles/_zshrc ~/.zshrc
-
-Symlink to the *oh-my-zsh* theme
-
-    ln -s path/to/dotfiles/_zsh/xeno.zsh-theme ~/.oh-my-zsh/themes/xeno.zsh-theme
+    ln -s path/to/dotfiles/zsh ~/.zsh
+    ln -s path/to/dotfiles/zsh/zshrc ~/.zshrc
+    ln -s path/to/dotfiles/zsh/swift.zsh-theme ~/.oh-my-zsh/themes/swift.zsh-theme
 
 #### vim
-Symlink *~/.vim* and *~/.vimrc* to *\_vim* and *\_vimrc* respectively
+Symlink *~/.vim* and *~/.vimrc* to */vim* and */vim/vimrc* respectively
 
-    ln -s path/to/dotfiles/_vim ~/.vim
-    ln -s path/to/dotfiles/_vimrc ~/.vimrc
+    ln -s path/to/dotfiles/vim ~/.vim
+    ln -s path/to/dotfiles/vim/vimrc ~/.vimrc
 
 Setup Command-T
 
-    cd path/to/dotfiles/_vim/bundle/command-t
+    cd path/to/dotfiles/vim/bundle/command-t
     rake make
 
 #### git
