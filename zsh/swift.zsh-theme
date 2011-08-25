@@ -67,7 +67,9 @@ function collapse_pwd {
 }
 # Shows VIRTUAL_ENV info
 function virtualenv_info {
-     echo '[ '`basename $VIRTUAL_ENV`' ] '
+    if [ "$VIRTUAL_ENV" ]; then
+        echo '[ '`basename $VIRTUAL_ENV`' ] '
+    fi
 }
 # HG Versioning Info
 function hg_prompt_info {
