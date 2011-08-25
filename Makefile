@@ -1,4 +1,4 @@
-install: install-vim install-zsh
+install: install-vim install-zsh rake-vim-ct
 
 install-vim:
 	if test -d ~/.vim; then mv ~/.vim ~/.vim.bak; fi
@@ -11,3 +11,6 @@ install-zsh:
 	if test -f ~/.oh-my-zsh/themes/swift.zsh-theme; then rm ~/.oh-my-zsh/themes/swift.zsh-theme; fi
 	ln -s `pwd`/zsh/zshrc ~/.zshrc
 	ln -s `pwd`/zsh/swift.zsh-theme ~/.oh-my-zsh/themes/swift.zsh-theme
+
+rake-vim-ct:
+	cd vim/bundle/command-t; rake make
