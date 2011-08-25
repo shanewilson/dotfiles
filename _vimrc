@@ -55,6 +55,7 @@ let mapleader=","
 let maplocalleader="\\"
 
 nnoremap ; :
+imap jk <ESC>
 
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w

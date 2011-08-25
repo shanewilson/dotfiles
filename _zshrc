@@ -2,4 +2,13 @@ export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="xeno"
 plugins=(git git-flow hg svn virtualenv virtualenvwrapper)
 source $ZSH/oh-my-zsh.sh
+
+# java
 export JAVA_HOME=/usr/lib/jvm/java-6-sun
+
+# python
+# virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+source /usr/local/bin/virtualenvwrapper.sh
