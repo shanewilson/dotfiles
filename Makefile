@@ -6,6 +6,7 @@ install-vim:
 	ln -s `pwd`/vim ~/.vim
 	ln -s ~/vim/vimrc ~/.vimrc
 
-install-bash:
+install-zsh:
 	mv ~/.zshrc ~/.zshrc.bak
 	ln -s `pwd`/zsh/zshrc ~/.zshrc
+	ln -s `pwd`/zsh/swift.zsh-theme ~/.oh-my-zsh/themes/swift.zsh-theme

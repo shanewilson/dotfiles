@@ -1,5 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
-export ZSH_THEME="xeno"
+export ZSH_THEME="swift"
 plugins=(git git-flow hg svn virtualenv virtualenvwrapper)
 source $ZSH/oh-my-zsh.sh
 
