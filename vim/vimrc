@@ -56,7 +56,6 @@ let maplocalleader="\\"
 
 nnoremap ; :
 imap jk <ESC>
-cmap x x<CR>
 
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w
@@ -72,8 +71,8 @@ map <leader>v :sp ~/.vimrc<CR><C-W>_
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " open/close the quickfix window
-nmap <leader>c :copen<CR>
-nmap <leader>cc :cclose<CR>
+nmap <leader>qo :copen<CR>
+nmap <leader>qc :cclose<CR>
 
 " ctrl-jklm  changes to that split
 map <c-j> <c-w>j
@@ -90,7 +89,8 @@ map <leader>p "+gP
 
 " Quit window on <leader>q
 nnoremap <leader>q :q<CR>
-"
+nnoremap <leader>x :x<CR>
+
 " hide matches on <leader>space
 nnoremap <leader><space> :nohlsearch<cr>
 

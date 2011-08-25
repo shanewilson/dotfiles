@@ -29,7 +29,7 @@ Python_ and PIP_::
     apt-get python python-setuptools
     easy_install pip
 
-Pep8_, Pyflakes_, Nose_ and `Django Nose`_::
+Pep8_, Pyflakes_, Nose_, `Django Nose`_ and Virtualenv_::
 
     sudo pip install pep8 pyflakes nose django-nose
 
@@ -51,6 +51,7 @@ Ctags_ support for TagList::
 .. _Pep8: http://pypi.python.org/pypi/pep8
 .. _Pyflakes: http://pypi.python.org/pypi/pyflakes/0.4.0
 .. _Nose: http://pypi.python.org/pypi/nose/1.0.0
+.. _Virtualenv: http://pypi.python.org/pypi/virtualenv
 .. _Django Nose: http://pypi.python.org/pypi/django-nose/0.1.3
 .. _Ruby: http://www.ruby-lang.org/
 .. _Rake: http://rake.rubyforge.org/
