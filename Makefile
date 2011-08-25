@@ -1,4 +1,4 @@
-install: install-zsh install-vim
+install: install-zsh install-vim install-xterm
 
 install-zsh:
 	if test -f ~/.zshrc; then mv ~/.zshrc ~/.zshrc.bak; fi
@@ -14,3 +14,7 @@ install-vim:
 	git submodule init
 	git submodule update
 	cd vim/bundle/command-t; rake make
+
+install-xterm:
+	if test -f ~/.Xdefaults; then mv ~/.Xdefaults ~/.Xdefaults.bak; fi
+	ln -s `pwd`/.Xdefaults ~/.Xdefaults
