@@ -31,7 +31,7 @@ Python_ and PIP_::
 
 Pep8_, Pyflakes_, Nose_, `Django Nose`_ and Virtualenv_::
 
-    sudo pip install pep8 pyflakes nose django-nose
+    pip install pep8 pyflakes nose django-nose virtualenv
 
 Ruby_, Rake_ and Ack_::
 
