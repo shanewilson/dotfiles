@@ -33,17 +33,9 @@ Pep8_, Pyflakes_, Nose_, `Django Nose`_ and Virtualenv_::
 
     pip install pep8 pyflakes nose django-nose virtualenv
 
-Ruby_, Rake_ and Ack_::
+Ruby_, Rake_, Ack_, Ctags_ and Vim Ruby support::
 
-    apt-get install ruby ruby-dev rake ack
-
-Vim Ruby support for Command-T::
-
-    apt-get install vim-nox
-
-Ctags_ support for TagList::
-
-    apt-get install exuberant-ctags
+    apt-get install ruby ruby-dev rake ack exuberant-ctags vim-nox
 
 .. _oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
 .. _Python: http://www.python.org
@@ -97,9 +89,7 @@ Setup Command-T::
 git
 '''
 
-Symlink *~/.gitconfig* to *\gitconfig*::
-
-    ln -s path/to/dotfiles/gitconfig ~/.gitconfig
+Copy any lines you want from */gitconfig* to your *~/.gitconfig* files
 
 Solarized Terminal
 ''''''''''''''''''
