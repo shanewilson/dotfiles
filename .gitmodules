@@ -1,78 +1,78 @@
-[submodule "_vim/bundle/fugitive"]
-	path = _vim/bundle/fugitive
+[submodule "vim/bundle/fugitive"]
+	path = vim/bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "_vim/bundle/snipmate"]
-	path = _vim/bundle/snipmate
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
-[submodule "_vim/bundle/surround"]
-	path = _vim/bundle/surround
+[submodule "vim/bundle/surround"]
+	path = vim/bundle/surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule "_vim/bundle/git"]
-	path = _vim/bundle/git
+[submodule "vim/bundle/git"]
+	path = vim/bundle/git
 	url = git://github.com/tpope/vim-git.git
-[submodule "_vim/bundle/supertab"]
-	path = _vim/bundle/supertab
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
 	url = git://github.com/ervandew/supertab.git
-[submodule "_vim/bundle/minibufexpl"]
-	path = _vim/bundle/minibufexpl
+[submodule "vim/bundle/minibufexpl"]
+	path = vim/bundle/minibufexpl
 	url = git://github.com/sontek/minibufexpl.vim.git
-[submodule "_vim/bundle/command-t"]
-	path = _vim/bundle/command-t
+[submodule "vim/bundle/command-t"]
+	path = vim/bundle/command-t
 	url = git://github.com/wincent/Command-T.git
-[submodule "_vim/bundle/pyflakes"]
-	path = _vim/bundle/pyflakes
+[submodule "vim/bundle/pyflakes"]
+	path = vim/bundle/pyflakes
 	url = git://github.com/kevinw/pyflakes-pathogen.git
-[submodule "_vim/bundle/ack"]
-	path = _vim/bundle/ack
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
-[submodule "_vim/bundle/gundo"]
-	path = _vim/bundle/gundo
+[submodule "vim/bundle/gundo"]
+	path = vim/bundle/gundo
 	url = git://github.com/sjl/gundo.vim.git
-[submodule "_vim/bundle/pydoc"]
-	path = _vim/bundle/pydoc
+[submodule "vim/bundle/pydoc"]
+	path = vim/bundle/pydoc
 	url = git://github.com/fs111/pydoc.vim.git
-[submodule "_vim/bundle/pep8"]
-	path = _vim/bundle/pep8
+[submodule "vim/bundle/pep8"]
+	path = vim/bundle/pep8
 	url = git://github.com/vim-scripts/pep8.git
-[submodule "_vim/bundle/py.test"]
-	path = _vim/bundle/py.test
+[submodule "vim/bundle/py.test"]
+	path = vim/bundle/py.test
 	url = git://github.com/alfredodeza/pytest.vim.git
-[submodule "_vim/bundle/makegreen"]
-	path = _vim/bundle/makegreen
+[submodule "vim/bundle/makegreen"]
+	path = vim/bundle/makegreen
 	url = git://github.com/reinh/vim-makegreen
-[submodule "_vim/bundle/tasklist"]
-	path = _vim/bundle/tasklist
+[submodule "vim/bundle/tasklist"]
+	path = vim/bundle/tasklist
 	url = git://github.com/vim-scripts/TaskList.vim.git
-[submodule "_vim/bundle/nerdtree"]
-	path = _vim/bundle/nerdtree
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
 	url = git://github.com/vim-scripts/The-NERD-tree.git
-[submodule "_vim/bundle/ropevim"]
-	path = _vim/bundle/ropevim
+[submodule "vim/bundle/ropevim"]
+	path = vim/bundle/ropevim
 	url = git://github.com/sontek/rope-vim.git
-[submodule "_vim/bundle/solarized"]
-	path = _vim/bundle/solarized
+[submodule "vim/bundle/solarized"]
+	path = vim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "_vim/bundle/gitv"]
-	path = _vim/bundle/gitv
+[submodule "vim/bundle/gitv"]
+	path = vim/bundle/gitv
 	url = git://github.com/gregsexton/gitv.git
-[submodule "_vim/bundle/vim-cute-python"]
-	path = _vim/bundle/vim-cute-python
+[submodule "vim/bundle/vim-cute-python"]
+	path = vim/bundle/vim-cute-python
 	url = git://github.com/JNRowe/vim-cute-python.git
-[submodule "_vim/bundle/vim-autocomlpop"]
-	path = _vim/bundle/vim-autocomlpop
+[submodule "vim/bundle/vim-autocomlpop"]
+	path = vim/bundle/vim-autocomlpop
 	url = git://github.com/oppara/vim-autocomplpop
-[submodule "_vim/bundle/vim-l9"]
-	path = _vim/bundle/vim-l9
+[submodule "vim/bundle/vim-l9"]
+	path = vim/bundle/vim-l9
 	url = git://github.com/oppara/vim-l9.git
-[submodule "_vim/bundle/nerdcommenter"]
-	path = _vim/bundle/nerdcommenter
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
-[submodule "_vim/bundle/tagbar"]
-	path = _vim/bundle/tagbar
+[submodule "vim/bundle/tagbar"]
+	path = vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
-[submodule "_vim/bundle/python-syntax"]
-	path = _vim/bundle/python-syntax
+[submodule "vim/bundle/python-syntax"]
+	path = vim/bundle/python-syntax
 	url = git://github.com/olivierverdier/python-syntax.vim.git
-[submodule "_vim/bundle/vim-virtualenv"]
-	path = _vim/bundle/vim-virtualenv
+[submodule "vim/bundle/vim-virtualenv"]
+	path = vim/bundle/vim-virtualenv
 	url = git://github.com/jmcantrell/vim-virtualenv.git
