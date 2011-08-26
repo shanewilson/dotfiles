@@ -101,7 +101,9 @@ Everything was put together while using the solarized_ colour scheme, so you sho
 
 Credits
 -------
-
+| d 
+| df
+| dfd
 | https://github.com/ryanb/dotfiles
 | http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
 | http://matija.suklje.name/?q=node/207
