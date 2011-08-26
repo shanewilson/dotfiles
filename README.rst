@@ -6,8 +6,8 @@ Collection of config files to setup my system
 
 Installation
 ------------
-
-    git clone --recurse-submodules git://github.com/shanewilson/dotfiles.git
+::
+   git clone --recurse-submodules git://github.com/shanewilson/dotfiles.git
 
 Dependences
 ~~~~~~~~~~~
