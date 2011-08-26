@@ -1,14 +1,18 @@
+=========
 Dot Files
 =========
 
 Collection of config files to setup my system
 
-## Installation
+Installation
+------------
 
     git clone --recurse-submodules git://github.com/shanewilson/dotfiles.git
 
-### Dependences
-#### zsh
+Dependences
+~~~~~~~~~~~
+zsh
+___
 If you plan on using zsh settings you will need [oh-my-zsh][]
 
 #### vim
