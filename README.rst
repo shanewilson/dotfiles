@@ -1,4 +1,6 @@
-# Dot Files
+Dot Files
+=========
+
 Collection of config files to setup my system
 
 ## Installation
