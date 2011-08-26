@@ -13,85 +13,95 @@ Clone from github::
 
 Dependences
 ~~~~~~~~~~~
-zsh
-___
-If you plan on using zsh settings you will need [oh-my-zsh][]
+**zsh**
 
-#### vim
+If you plan on using zsh settings you will need oh-my-zsh_
+
+**vim**
+
 To get the most of vim you will need to install the following:
 
-[Python][] and [PIP][]
+Python_ and PIP_::
 
     apt-get python python-setuptools
     easy_install pip
 
-[Pep8][], [Pyflakes][], [Nose][] and [Django Nose][]
+Pep8_, Pyflakes_, Nose_ and `Django Nose`_::
 
     sudo pip install pep8 pyflakes nose django-nose
 
-[Ruby][], [Rake][] and [Ack][]
+Ruby_, Rake_ and Ack_::
 
     apt-get install ruby ruby-dev rake ack
 
-If your vim does not have ruby support
+If your vim does not have ruby support::
 
     apt-get install vim-nox
 
-Ctags support for TagList
+Ctags_ support for TagList_::
 
     apt-get install exuberant-ctags
 
-[oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
-[Python]: http://www.python.org
-[PIP]: http://pypi.python.org/pypi/pip
-[Pep8]: http://pypi.python.org/pypi/pep8
-[Pyflakes]: http://pypi.python.org/pypi/pyflakes/0.4.0
-[Nose]: http://pypi.python.org/pypi/nose/1.0.0
-[Django Nose]: http://pypi.python.org/pypi/django-nose/0.1.3
-[Ruby]: http://www.ruby-lang.org/
-[Rake]: http://rake.rubyforge.org/
-[Ack]: http://betterthangrep.com/
+.. _oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
+.. _Python: http://www.python.org
+.. _PIP: http://pypi.python.org/pypi/pip
+.. _Pep8: http://pypi.python.org/pypi/pep8
+.. _Pyflakes: http://pypi.python.org/pypi/pyflakes/0.4.0
+.. _Nose: http://pypi.python.org/pypi/nose/1.0.0
+.. _Django Nose: http://pypi.python.org/pypi/django-nose/0.1.3
+.. _Ruby: http://www.ruby-lang.org/
+.. _Rake: http://rake.rubyforge.org/
+.. _Ack: http://betterthangrep.com/
+.. _Ctags: 
+.. _TagList: 
 
-### Install Script
+Install Script
+~~~~~~~~~~~~~~
+
+Type the following in the dotfiles directory::
 
     make install
 
-### Manual
+Manual
+~~~~~~
 
 **Backup any config files before you change them.**
 
-#### zsh
+**zsh**
+
 This assumes you have *oh-my-zsh* installed and working.
 
-Symlink *~/.zsh* and *~/.zshrc* to */zsh* and */zsh/zshrc* respectively
+Symlink *~/.zsh* and *~/.zshrc* to */zsh* and */zsh/zshrc* respectively::
 
     ln -s path/to/dotfiles/zsh ~/.zsh
     ln -s path/to/dotfiles/zsh/zshrc ~/.zshrc
     ln -s path/to/dotfiles/zsh/swift.zsh-theme ~/.oh-my-zsh/themes/swift.zsh-theme
 
-#### vim
-Symlink *~/.vim* and *~/.vimrc* to */vim* and */vim/vimrc* respectively
+**vim**
+Symlink *~/.vim* and *~/.vimrc* to */vim* and */vim/vimrc* respectively::
 
     ln -s path/to/dotfiles/vim ~/.vim
     ln -s path/to/dotfiles/vim/vimrc ~/.vimrc
 
-Setup Command-T
+Setup Command-T::
 
     cd path/to/dotfiles/vim/bundle/command-t
     rake make
 
-#### git
-Symlink *~/.gitconfig* to *\gitconfig*
+**git**
+Symlink *~/.gitconfig* to *\gitconfig*::
 
-    ln -s path/to/dotfiles/_gitconfig ~/.gitconfig
+    ln -s path/to/dotfiles/gitconfig ~/.gitconfig
 
-#### Solarized Terminal
-Everything was put together while using the [solarized][] colour scheme, so you should probably make sure to use it too. It is already included with vim, but to get the most out of the zsh theme you will need a [solarized genome terminal][] as well.
+**Solarized Terminal**
+Everything was put together while using the solarized_ colour scheme, so you should probably make sure to use it too. It is already included with vim, but to get the most out of the zsh theme you will need a `solarized genome terminal`_ as well.
 
-[solarized]: http://ethanschoonover.com/solarized
-[solarized genome terminal]: http://xorcode.com/guides/solarized-vim-eclipse-ubuntu/
+.. _solarized: http://ethanschoonover.com/solarized
+.. _solarized genome terminal: http://xorcode.com/guides/solarized-vim-eclipse-ubuntu/
 
-## Credits
-https://github.com/ryanb/dotfiles  
-http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/  
-http://matija.suklje.name/?q=node/207  
+Credits
+-------
+
+https://github.com/ryanb/dotfiles::
+http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/:: 
+http://matija.suklje.name/?q=node/207::
