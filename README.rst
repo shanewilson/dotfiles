@@ -13,11 +13,14 @@ Clone from github::
 
 Dependences
 ~~~~~~~~~~~
-**zsh**
+
+zsh
+'''
 
 If you plan on using zsh settings you will need oh-my-zsh_
 
-**vim**
+vim
+'''
 
 To get the most of vim you will need to install the following:
 
@@ -34,11 +37,11 @@ Ruby_, Rake_ and Ack_::
 
     apt-get install ruby ruby-dev rake ack
 
-If your vim does not have ruby support::
+Vim Ruby support for Command-T::
 
     apt-get install vim-nox
 
-Ctags_ support for TagList_::
+Ctags_ support for TagList::
 
     apt-get install exuberant-ctags
 
@@ -52,8 +55,7 @@ Ctags_ support for TagList_::
 .. _Ruby: http://www.ruby-lang.org/
 .. _Rake: http://rake.rubyforge.org/
 .. _Ack: http://betterthangrep.com/
-.. _Ctags: 
-.. _TagList: 
+.. _Ctags: http://ctags.sourceforge.net/
 
 Install Script
 ~~~~~~~~~~~~~~
@@ -67,7 +69,8 @@ Manual
 
 **Backup any config files before you change them.**
 
-**zsh**
+zsh
+'''
 
 This assumes you have *oh-my-zsh* installed and working.
 
@@ -77,7 +80,9 @@ Symlink *~/.zsh* and *~/.zshrc* to */zsh* and */zsh/zshrc* respectively::
     ln -s path/to/dotfiles/zsh/zshrc ~/.zshrc
     ln -s path/to/dotfiles/zsh/swift.zsh-theme ~/.oh-my-zsh/themes/swift.zsh-theme
 
-**vim**
+vim
+'''
+
 Symlink *~/.vim* and *~/.vimrc* to */vim* and */vim/vimrc* respectively::
 
     ln -s path/to/dotfiles/vim ~/.vim
@@ -88,12 +93,16 @@ Setup Command-T::
     cd path/to/dotfiles/vim/bundle/command-t
     rake make
 
-**git**
+git
+'''
+
 Symlink *~/.gitconfig* to *\gitconfig*::
 
     ln -s path/to/dotfiles/gitconfig ~/.gitconfig
 
-**Solarized Terminal**
+Solarized Terminal
+''''''''''''''''''
+
 Everything was put together while using the solarized_ colour scheme, so you should probably make sure to use it too. It is already included with vim, but to get the most out of the zsh theme you will need a `solarized genome terminal`_ as well.
 
 .. _solarized: http://ethanschoonover.com/solarized
@@ -101,10 +110,9 @@ Everything was put together while using the solarized_ colour scheme, so you sho
 
 Credits
 -------
-| d 
-| df
-| dfd
-| https://github.com/ryanb/dotfiles
-| http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
-| http://matija.suklje.name/?q=node/207
 
+https://github.com/ryanb/dotfiles
+
+http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
+
+http://matija.suklje.name/?q=node/207
