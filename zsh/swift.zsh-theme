@@ -35,11 +35,14 @@ zle -N newtab
 # }}}
 # Aliases # {{{
 # ============================================================
+# xterm
+#alias xterm="xterm -bg #002b36 -fg #657b83"
+
 # cd
 alias ..='cd ..'
 
 # ls
-alias ls="ls -F"
+alias ls="ls -F --color"
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
