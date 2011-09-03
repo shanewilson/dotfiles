@@ -76,8 +76,34 @@
 *color7:                S_base2
 *color15:               S_base3
 
-!! bigger font
-*faceName: terminus:pixel-size=14
+!! Xft Font configuration
+*hinting: true
+*hintstyle: hintslight
+
+! Use a decent font
+*faceName: terminus:pixelsize=13
+
+!easier url grabbing
+*charClass:        33:48,35-38:48,39:43,42-47:48,58-59:48,61:48,63-64:48,126:48
+
+! Fix backspace key in terminal
+! Remaps backspace key from <c-h> to <c-?>, and remaps <c-space> to <c-h>.
+*VT100.Translations:#override \
+      ~Ctrl<Key>BackSpace:string(0x7F)\n\
+       Ctrl<Key>BackSpace:string(0x08)\n
+*ttyModes:erase ^?
+
+! Fix backspace key in vim
+*VT100.backarrowKey:false
+
+! Set up scrollbars - get them, get them on the right side, and be
+! able to scroll them with the right,left, or middle mouse button
+*ScrollBar: on
+*scrollBar: true
+*rightScrollBar: true
+*multiScroll: on
+*jumpScroll: on
+
 
 
 
