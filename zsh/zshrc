@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="swift"
-plugins=(command-not-found debian django git git-flow github pip ssh-agent svn vi-mode virtualenv virtualenvwrapper)
+plugins=(command-not-found debian django git git-flow github pip svn vi-mode virtualenv virtualenvwrapper)
 source $ZSH/oh-my-zsh.sh
 
 # java
