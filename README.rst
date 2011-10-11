@@ -26,16 +26,16 @@ To get the most of vim you will need to install the following:
 
 Python_ and PIP_::
 
-    apt-get python python-setuptools
-    easy_install pip
+    sudo apt-get install python-pip
+    sudo pip install pip -U
 
 Pep8_, Pyflakes_, Nose_, `Django Nose`_ and Virtualenv_::
 
-    pip install pep8 pyflakes nose django-nose virtualenv
+    sudo pip install pep8 pyflakes nose django-nose virtualenv
 
 Ruby_, Rake_, Ack_, Ctags_ and Vim Ruby support::
 
-    apt-get install ruby ruby-dev rake ack exuberant-ctags vim-nox
+    sudo apt-get install ruby ruby-dev rake ack exuberant-ctags vim-nox
 
 .. _oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
 .. _Python: http://www.python.org
