@@ -11,6 +11,18 @@ Clone from github::
 
    git clone --recurse-submodules git://github.com/shanewilson/dotfiles.git
 
+Install Script
+~~~~~~~~~~~~~~
+
+Type the following in the dotfiles directory::
+
+    make all
+
+or::
+
+    make build
+    make install
+
 Dependences
 ~~~~~~~~~~~
 
@@ -50,12 +62,6 @@ Ruby_, Rake_, Ack_, Ctags_ and Vim Ruby support::
 .. _Ack: http://betterthangrep.com/
 .. _Ctags: http://ctags.sourceforge.net/
 
-Install Script
-~~~~~~~~~~~~~~
-
-Type the following in the dotfiles directory::
-
-    make install
 
 Manual
 ~~~~~~
