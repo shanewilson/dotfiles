@@ -16,12 +16,7 @@ Install Script
 
 Type the following in the dotfiles directory::
 
-    make all
-
-or::
-
-    make build
-    make install
+    sudo make install && make symlink
 
 Dependences
 ~~~~~~~~~~~
