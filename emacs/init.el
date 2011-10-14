@@ -32,4 +32,5 @@
 (add-to-list 'load-path (concat user-specific-dir "/color-theme-solarized"))
 (require 'solarized-definitions)
 (add-to-list 'custom-theme-load-path (concat user-specific-dir "/color-theme-solarized"))
+(set-frame-font "Mono-10")
 (load-theme 'solarized-dark)
