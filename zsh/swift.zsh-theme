@@ -39,7 +39,7 @@ zle -N newtab
 #alias xterm="xterm -bg #002b36 -fg #657b83"
 
 alias v='vi'
-alias e='emacs'
+alias e='emacs &'
 
 # cd
 alias ..='cd ..'
