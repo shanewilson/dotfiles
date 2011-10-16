@@ -18,7 +18,7 @@ install-vim: build-vim
 install-emacs:
 	USERNAME=$(shell whoami)
 	mkdir -p ~/.emacs.d/$(USERNAME)
-	if ! test -d ~/.emacs.d/$(USERNAME)/color-theme-solarized; then git clone git://github.com/sellout/emacs-color-theme-solarized.git ~/.emacs.d/$(USERNAME)/color-theme-solarized; fi
+	test -d ~/.emacs.d/$(USERNAME)/color-theme-solarized || git clone git://github.com/sellout/emacs-color-theme-solarized.git ~/.emacs.d/$(USERNAME)/color-theme-solarized
 	if test -f ~/.emacs.d/init.el; then mv ~/.emacs.d/init.el ~/.emacs.d/init.el.bak; fi
 	if test -f ~/.emacs.d/$(USERNAME).el; then mv ~/.emacs.d/$(USERNAME).el ~/.emacs.d/$(USERNAME).el.bak; fi
 	ln -s `pwd`/emacs/init.el ~/.emacs.d/init.el
