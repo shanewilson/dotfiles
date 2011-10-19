@@ -3,9 +3,6 @@ export ZSH_THEME="swift"
 plugins=(command-not-found debian django git git-flow github pip svn emacs-mode virtualenv virtualenvwrapper)
 source $ZSH/oh-my-zsh.sh
 
-# java
-export JAVA_HOME=/usr/lib/jvm/java-6-sun
-
 # python
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
