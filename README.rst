@@ -9,7 +9,7 @@ Installation
 
 Clone from github::
 
-   git clone --recurse-submodules git://github.com/shanewilson/dotfiles.git ~/.dotfiles
+   git clone --recursive git://github.com/shanewilson/dotfiles.git ~/.dotfiles
 
 Install Script
 ~~~~~~~~~~~~~~
