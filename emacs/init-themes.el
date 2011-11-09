@@ -59,6 +59,9 @@ ignored: use `custom-enabled-themes' instead."
       (custom-set-variables '(custom-enabled-themes '(solarized-dark)))
     (color-theme-solarized-dark)))
 
+
+(require 'solarized-definitions)
 (load-theme 'solarized-dark)
+(set-frame-font "Mono-10")
 
 (provide 'init-themes)
