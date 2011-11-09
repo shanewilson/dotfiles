@@ -76,3 +76,12 @@
 [submodule "vim/bundle/vim-l9"]
 	path = vim/bundle/vim-l9
 	url = git://github.com/clones/vim-l9.git
+[submodule "emacs/site-lisp/pointback"]
+	path = emacs/site-lisp/pointback
+	url = git://github.com/emacsmirror/pointback.git
+[submodule "emacs/site-lisp/fuzzy-format"]
+	path = emacs/site-lisp/fuzzy-format
+	url = git://github.com/emacsmirror/fuzzy-format.git
+[submodule "emacs/site-lisp/color-theme-solarized"]
+	path = emacs/site-lisp/color-theme-solarized
+	url = https://github.com/sellout/emacs-color-theme-solarized.git
