@@ -45,7 +45,7 @@ alias e='emacs'
 alias ..='cd ..'
 
 # ls
-alias ls="ls -F --color"
+alias ls="ls -F"
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
