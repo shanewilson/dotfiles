@@ -29,8 +29,8 @@ OK_STRING    = $(OK_COLOR)[OK]$(NO_COLOR)
 ERROR_STRING = $(ERROR_COLOR)[ERRORS]$(NO_COLOR)
 WARN_STRING  = $(WARN_COLOR)[WARNINGS]$(NO_COLOR)
 
-symlink: symlink-zsh symlink-vim symlink-emacs
-install: install-zsh install-vim install-emacs
+symlink: symlink-zsh symlink-vim
+install: install-zsh install-vim
 
 define RESULT
 	@if test -e ~/dftemp.errors; \
