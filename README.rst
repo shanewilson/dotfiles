@@ -18,7 +18,7 @@ Type the following in the dotfiles directory::
 
     sudo make install && make symlink
 
-Solarized console:
+Solarized console::
 
     gconftool-2 --set "/apps/gnome-terminal/profiles/Default/use_theme_background" --type bool false
     gconftool-2 --set "/apps/gnome-terminal/profiles/Default/use_theme_colors" --type bool false
