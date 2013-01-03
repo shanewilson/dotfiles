@@ -126,7 +126,7 @@ zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 # allow one error for every three characters typed in approximate completer
 zstyle -e ':completion:*:approximate:*' max-errors \
     'reply=( $(( ($#PREFIX+$#SUFFIX)/2 )) numeric )'
-    
+
 # insert all expansions for expand completer
 zstyle ':completion:*:expand:*' tag-order all-expansions
 #
@@ -134,7 +134,7 @@ zstyle ':completion:*:expand:*' tag-order all-expansions
 # 1. All /etc/hosts hostnames are in autocomplete
 # 2. If you have a comment in /etc/hosts like #%foobar.domain,
 #    then foobar.domain will show up in autocomplete!
-zstyle ':completion:*' hosts $(awk '/^[^#]/ {print $2 $3" "$4" "$5}' /etc/hosts | grep -v ip6- && grep "^#%" /etc/hosts | awk -F% '{print $2}') 
+zstyle ':completion:*' hosts $(awk '/^[^#]/ {print $2 $3" "$4" "$5}' /etc/hosts | grep -v ip6- && grep "^#%" /etc/hosts | awk -F% '{print $2}')
 # formatting and messages
 zstyle ':completion:*' verbose yes
 zstyle ':completion:*:descriptions' format '%B%d%b'
@@ -202,6 +202,27 @@ alias %=' '
 # }}}
 # Custom Functions # {{{
 # ============================================================
+# Colourized Maven
+function mvn-color {
+  # Filter mvn output using sed
+  mvn $@ | sed -e "s/\(\[INFO\]\)\ \(Building.*\)/$fg[white]\1 $fg[cyan]\2$reset_color/g" \
+               -e "s/\(\[INFO\]\ Total\ time.*\)/$fg[white]\1$reset_color/g" \
+               -e "s/\(\[INFO\]\ Finished at.*\)/$fg[white]\1$reset_color/g" \
+               -e "s/\(\[INFO\]\ Final\ Memory.*\)/$fg[white]\1$reset_color/g" \
+               -e "s/\(\[INFO\]\ \-.*\)/$fg[white]\1$reset_color/g" \
+               -e "s/\(\[INFO\]\ \[.*\)/$fg[white]\1$reset_color/g" \
+               -e "s/\(\[INFO\]\)\ \(Including.*\)/$fg[white]\1 $fg[blue]\2$reset_color/g" \
+               -e "s/\(\[INFO\]\ BUILD SUCCESS\)/$fg[green]\1$reset_color/g" \
+               -e "s/\(\[INFO\]\ BUILD FAILURE\)/$fg[red]\1$reset_color/g" \
+               -e "s/\(\[WARNING\].*\)/$fg[yellow]\1$reset_color/g" \
+               -e "s/\(\[ERROR\].*\)/$fg[red]\1$reset_color/g" \
+               -e "s/Tests run: \([^,]*\), Failures: \([^,]*\), Errors: \([^,]*\), Skipped: \([^,]*\), Time elapsed: \([^,]*\)/$fg[white]Tests run: $fg[green]\1$reset_color, $fg[white]Failures: $fg[red]\2$reset_color, $fg[white]Errors: $fg[red]\3$reset_color, $fg[white]Skipped: $fg[yellow]\4$reset_color, $fg[white]Time elapsed: $fg[cyan]\5$reset_color/g" \
+               -e "s/\(Downloading: .*\)/$fg[magenta]\1$reset_color/g"
+
+  # Make sure formatting is reset
+  echo -ne $reset_color
+}
+alias mvn='mvn-color'
 # Convert $HOME to ~
 function collapse_pwd {
     echo $(pwd | sed -e "s,^$HOME,~,")
