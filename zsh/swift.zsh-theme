@@ -216,7 +216,9 @@ function mvn-color {
                -e "s/\(\[INFO\]\ BUILD FAILURE\)/$fg[red]\1$reset_color/g" \
                -e "s/\(\[WARNING\].*\)/$fg[yellow]\1$reset_color/g" \
                -e "s/\(\[ERROR\].*\)/$fg[red]\1$reset_color/g" \
-               -e "s/Tests run: \([^,]*\), Failures: \([^,]*\), Errors: \([^,]*\), Skipped: \([^,]*\), Time elapsed: \([^,]*\)/$fg[white]Tests run: $fg[green]\1$reset_color, $fg[white]Failures: $fg[red]\2$reset_color, $fg[white]Errors: $fg[red]\3$reset_color, $fg[white]Skipped: $fg[yellow]\4$reset_color, $fg[white]Time elapsed: $fg[cyan]\5$reset_color/g" \
+               -e "s/Tests run: \([^,]*\), Failures: \([^,]*\), Errors: \([^,]*\), Skipped: \([^,]*\)/$fg[white]Tests run: $fg[green]\1$reset_color, $fg[white]Failures: $fg[red]\2$reset_color, $fg[white]Errors: $fg[red]\3$reset_color, $fg[white]Skipped: $fg[yellow]\4$reset_color/g" \
+               -e "s/\(Results :\)/$fg[white]\1$reset_color/g" \
+               -e "s/Time elapsed: \([^,]*\)/$fg[white]Time elapsed: $fg[cyan]\1$reset_color/g" \
                -e "s/\(Downloading: .*\)/$fg[magenta]\1$reset_color/g"
 
   # Make sure formatting is reset
